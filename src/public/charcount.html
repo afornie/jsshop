@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app ng-controller="charCountController">
+<head>
+    <title>Tito Char Count</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+<h2>Char Count</h2>
+
+<table>
+    <tr>
+        <td>
+            <textarea ng-model="mainText">{{mainText}}</textarea>
+        </td>
+        <td>
+            <h1 ng-model="total">{{total}}</h1>
+        </td>
+    </tr>
+</table>
+
+<button ng-click="count()">Count</button>
+
+<table border="1">
+    <thead>
+    <td>Letra</td><td>Valor</td><td>Cantidad</td><td>Total</td>
+    </thead>
+    <tr ng-repeat="c in grid">
+        <td>{{c.id}}</td>
+        <td>{{c.value}}</td>
+        <td>{{c.amount}}</td>
+        <td>{{c.value * c.amount}}</td>
+    </tr>
+</table>
+
+</body>
+
+<script src="javascripts/angular.min.js"></script>
+<script src="javascripts/charcount.js"></script>
+</html>

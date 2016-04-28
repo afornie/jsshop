@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('jsshop:server');
+var app = require('../src/app');
+var debug = require('debug')('forum:server');
 var http = require('http');
 
 /**
